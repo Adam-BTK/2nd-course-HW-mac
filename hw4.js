@@ -92,3 +92,21 @@
 // console.log(circle1.getCircleLength());
 
 // Задание 7
+
+
+function guessSeason() {
+  let monthNumber = Number(prompt('Введите число от 1 до 12 и узнайте время года'));
+  if ((monthNumber >= 1 && monthNumber <= 2) || monthNumber === 12) {
+    console.log('Зима близко!');
+  } else if (monthNumber >= 3 && monthNumber <= 5) {
+    console.log('Придет весна, и цветы распустятся сами');
+  } else if (monthNumber >= 6 && monthNumber <= 8) {
+    console.log('Летняя пора – и жизнь легка');
+  } else if (monthNumber >= 9 && monthNumber <= 11) {
+    console.log('Унылая пора, очей очарованье');
+  } else {
+    console.log('Вы ввели неверное значение');
+  }  
+}
+
+// Задание 8
