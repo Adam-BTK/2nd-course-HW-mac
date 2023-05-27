@@ -62,17 +62,32 @@
 //   console.log(i);
 //   num++;
 // }
+// console.log(num);
+
 
 // Задание 5
 
+// Вариант 1
 
 // const dayOfreport = 5;
 // const daysInMonth = 31;
 
 // for (let i = dayOfreport; i <= daysInMonth; i++) {
-//   if ((i - dayOfreport) % 7 === 0) {
+//   if (i % 7 === dayOfreport) {
 //     console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`);
 //   }  
 // }
+
+// Вариант 2
+
+// const dayOfreport = 5;
+// const daysInMonth = 31;
+
+// for (let i = dayOfreport; i <= daysInMonth; i++) {
+//   if (i % 7 === (dayOfreport % 7)) {
+//     console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`);
+//   }  
+// }
+
 
 // Задание 6

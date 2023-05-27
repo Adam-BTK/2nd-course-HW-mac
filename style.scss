@@ -67,13 +67,13 @@
   &__block {
     border-radius: 18px;
     width: 378px;
-    height: 300px;    
+    height: 300px;
     display: flex;
     align-items: flex-end;
     transition: all 0.3s;
   }
 
-  &__block:hover{
+  &__block:hover {
     box-shadow: 0 0 10px #FFFFFF;
     box-shadow: 0 0 10px #FFFFFF;
     transform: scale(1.05);
@@ -104,6 +104,53 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.seasons {
+  background-image: url(./images/bg_seasons.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 233px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    width: 584px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+  }
+
+  &__console {
+    transition: all 0.3s;
+  }
+
+  &__console:hover {
+    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #FFFFFF;
+    transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 
@@ -153,6 +200,30 @@
 
     &__block1 {
       margin-top: 128px;
+    }
+  }
+
+  .seasons {
+    padding-top: 51px;
+
+    &__left {
+      text-align: center;
+    }
+
+    &__console {
+      width: 344px; 
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 39px;
+    }
+
+    &__text {
+      width: 343px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }
