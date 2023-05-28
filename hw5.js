@@ -78,6 +78,9 @@
 // arr[0].reverse();
 // arr[0] = arr[0].join('');
 
+let arr = 'abcdef';
+arr.split('').reverse().join('');
+
 // console.log(arr);
 
 // Задание 8
