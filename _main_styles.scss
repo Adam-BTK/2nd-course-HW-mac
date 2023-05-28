@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;  
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -14,4 +14,8 @@ a {
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
+}
+
+html {
+  scroll-behavior: smooth;
 }
