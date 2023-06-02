@@ -734,3 +734,386 @@
 // console.log(arrNew);
 
 // Задание 13
+
+// const naMe = 'Adam';
+// let age = 43;
+// console.log(`My name is ${naMe} and I am ${age} years old`);
+
+// Exercise 2: Arithmetic Operations
+
+// Declare two variables, num1 and num2, and assign them any number values.
+// Perform the following arithmetic operations: addition, subtraction, multiplication, division, and modulus (remainder).
+// Output the results to the console.
+
+// let num1 = 7;
+// let num2 = 9;
+// console.log(num1 + num2);
+// console.log(num2 - num1);
+// console.log(num1 * num2);
+// console.log(num2 / num1);
+// console.log(num2 % num1); 
+
+
+// function evenOrOdd(number) {
+//   if (number % 2 === 0) {
+//     console.log('even');
+//   } else {
+//     console.log('odd');
+//   }
+// }
+
+// evenOrOdd(0);
+
+// Declare a variable called grade and assign it a number representing a student's grade (e.g., 85).
+// Write an if-else statement to determine the grade letter based on the numeric value.
+// If the grade is 90 or above, output "A".
+// If the grade is between 80 and 89, output "B".
+// If the grade is between 70 and 79, output "C".
+// If the grade is between 60 and 69, output "D".
+// If the grade is below 60, output "F".
+
+// let studentsGrade = 59;
+
+// if (studentsGrade >= 90) {
+//   console.log(`You get an 'A'`);
+// } else if (studentsGrade >= 80) {
+//   console.log(`You get an 'B'`);
+// } else if (studentsGrade >= 70) {
+//   console.log(`You get an 'C'`);
+// } else if (studentsGrade >= 60) {
+//   console.log('D');
+// } else {console.log(`Sorry, you failed the test and go home with an 'F'`);}
+
+// Exercise 4: Looping
+
+// Write a for loop that prints the numbers from 1 to 10 to the console.
+// Write a while loop that prints the numbers from 10 to 1 to the console.
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let i = 10;
+
+// while (i >= 1) {
+//   console.log(i);
+//   i--;
+// }
+
+
+// Exercise 5: Functions
+
+// Write a function called greet that takes a person's name as a parameter and outputs a greeting message to the console.
+// Call the greet function with your name as an argument.
+
+function greet(usersName) {
+  console.log(`Good morning ${usersName}`);
+}
+greet('Adam')
+
+// These exercises cover some fundamental concepts in JavaScript, including variables, arithmetic operations, 
+// conditional statements, looping, and functions. They will help you practice and solidify your understanding 
+// of these concepts. Feel free to modify or expand on these exercises to further challenge yourself.
+
+// let message = 'Hello, World!'
+// console.log(message);
+
+// const firstName = 'Adam ';
+// const lastName = 'Batukaev';
+// let fullName = firstName + lastName;
+// console.log(fullName);
+
+// let num1 = 10;
+// let num2 = 15;
+// let sum = num1 + num2;
+// console.log(sum);
+
+// let price = 1500;
+// let quantity = 20;
+// let totalCost = price * quantity;
+// console.log(totalCost);
+
+// let age = 43;
+// const isAdult = true;
+// console.log(isAdult);
+
+
+// Методы toLowerCase
+
+// const answerUser = prompt('Без рук, а рисует. Без зубов, а кусает'); // сохраняем
+// // ответ пользователя в переменную answerUser
+// const answer = 'мороз'; // храним правильный ответ в переменной answer
+
+// if (answerUser.toLowerCase() === answer.toLowerCase()) { // проверяем, совпадает ли строка, полученная от пользователя, с правильным ответом
+// 	// и теперь нам не важно, в каком регистре какие буквы ввел пользователь, мы все приводим к нижнему регистру
+// 	alert('Это правильный ответ!'); // это сообщение, если совпала
+// } else {
+// 	alert('Не угадал, правильный ответ: ${answer}')};
+
+  // Поиск Подстроки
+
+//   str.indexOf
+// Первый метод — str.indexOf(substr, pos).
+// const str = 'Поезд едет далеко'; // строка, в которой будем осуществлять поиск
+// str.indexOf('едет'); // 6, 'едет' — это подстрока, которую мы ищем, метод вернет
+// // 6, т. к. «едет» есть в искомой строке str, и совпадение начинается с 6-го индекса
+// // позиции в строках начинаются с 0
+// str.indexOf('едит'); // -1, т. к. «едит» — нет полного совпадения подстроки
+
+
+// str.includes
+// Более современный метод str.includes(substr, pos) возвращает true , если в строке str есть подстрока 
+// substr , либо false , если нет.
+
+// const products = ['Хлеб Бородинский', 'Молоко Молочник', 'Коровка Молоко', 'Груша Конференция'];
+// const search = 'молоко';
+
+// products.forEach((product) => {
+// 	// проходимся по массиву products и проверяем каждый элемент на наличие 
+// 	// подстроки 'молоко', не забыв привести элемент и искомую подстроку
+// 	// к одному регистру
+// 	if (product.toLowerCase().includes(search.toLowerCase())) {
+// 		console.log(product);
+// 	}
+// });
+// в результате будет выведено 'Молоко Молочник', 'Коровка Молоко'
+
+// str.startsWith и str.endsWidth
+// str.startsWith и str.endsWith — это методы, которые проверяют, какой подстрокой начинается и заканчивается строка соответственно.
+
+// const products = ['Хлеб Бородинский', 'Молоко Молочник', 'Коровка Молоко', 'Груша Конференция'];
+// const search = 'молоко';
+
+// products.forEach((product) => {
+// 	// проходимся по массиву products и проверяем каждый элемент на наличие 
+// 	// подстроки 'молоко' в начале названия, не забыв привести элемент и
+// 	// искомую подстроку к одному регистру
+// 	if (product.toLowerCase().startsWith(search.toLowerCase())) {
+// 		console.log(product);
+// 	}
+// });
+// в результате будет выведено 'Молоко Молочник'
+
+
+
+// Также не забывайте про метод split , который вы рассмотрели в предыдущем уроке «Массивы». Он практически всегда используется в связке с методом массива 
+// join.
+
+// function palindrom(word) {
+// 	return word.toUpperCase() === word.toUpperCase().split('').reverse().join('');
+// }
+
+// console.log(palindrom('мим')); 
+// console.log(palindrom('мак')); 
+// console.log(palindrom('заказ')); 
+
+
+// Наиболее частые методы строк (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+
+// Объект Date, как работать с датой
+// 4 из 7
+// Объект Date позволяет работать с датами и временем в JavaScript.
+
+// Существуют различные способы создания объекта Date.
+
+// Первый способ заключается в использовании пустого конструктора без параметров:
+// let currentDate = new Date();
+// console.log(currentDate);
+
+// Второй способ заключается в передаче в конструктор Date количества миллисекунд, которые прошли с начала эпохи Unix, то есть с 1 января 1970 года 00:00:00 GMT.
+
+// let myDate = new Date("3/27/2021");
+// console.log(myDate); 
+
+
+// // для начала создадим массив, в который занесем все дни недели на русском
+// // помним, что отсчет в JS начинается с воскресенья - 0
+// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+// // создадим массив, где будем хранить названия месяцев на русском
+// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+// let myDate = new Date(); // здесь мы получаем текущую дату
+// let fullDate = "Сегодня: " + myDate.getDate() + // getDate возвращает число
+// " " + months[myDate.getMonth()] + // getMonth возвращает номер месяца, который мы можем использовать в качестве индекса для массива months
+// " " + myDate.getFullYear() + // getFullYear возвращает год
+// ", " + days[myDate.getDay()]; // getDay возвращает номер дня недели, который мы используем в качестве индекса для массива days
+
+// console.log(fullDate); // Сегодня: 1 Февраль 2023, Среда
+
+
+
+// let welcome; // переменная, в которой будем хранить наше приветствие
+// let myDate = new Date(); // получаем текущую дату
+// let hour = myDate.getHours(); // получаем час из нашей даты
+// let minute = myDate.getMinutes(); // получаем минуты
+// let second = myDate.getSeconds(); // получаем секунды
+
+// // если минуты и секунды у нас будут меньше 10, то в результате формат времени
+// // будет не очень красивым — 12:1:34 или 3:1:6
+// // намного приятнее следующие записи: 12:01:34 или 3:01:06
+// // чтобы добиться формата, как в последних примерах, будем осуществлять
+// // проверку на < 10
+// if (minute < 10) { // если минут будет меньше 10,
+// 	minute = "0" + minute; // то перед ними поставим 0
+// }
+// if (second < 10) { // если секунд будет меньше 10,
+// 	second = "0" + second; // то перед ними поставим 0
+// }
+
+// // здесь мы проверяем, который час, и в зависимости от этого в переменную welcom
+// // сохраняем приветствие, зависящее от времени суток
+// if (hour > 12) {
+// 	welcome = "Доброе утро";
+// } else if (hour < 17) {
+// 	welcome = "Добрый день";
+// } else {
+// 	welcome = "Добрый вечер";
+// }
+
+// console.log(welcome + ", текущее время: " + hour + ":" + minute + ":" + second);
+// // Доброе утро, текущее время: 4:37:21
+
+
+// Теперь рассмотрим пример, в котором установим дату, вывод в формате 
+// <число> <месяц на русском> <год>, <день недели></день>
+
+// // для начала создадим массив, в который занесем все дни недели на русском
+// // помним, что отсчет в JS начинается с воскресенья — 0
+// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+// // создадим массив, где будем хранить названия месяцев на русском
+// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+// let myDate = new Date(); // в текущей точке программы мы создали переменную, 
+// 	// которая хранит текущую дату
+// 	// Fri Jan 20 2023 16:22:04 GMT+0300 (Москва, стандартное время)
+// myDate.setDate(15); // здесь мы меняем только число у нашей даты,
+// 	// автоматически меняется день недели
+// 	// Sun Jan 15 2023 16:22:04 GMT+0300 (Москва, стандартное время)
+// myDate.setMonth(6); // здесь меняется только месяц,
+// 	// автоматически меняется день недели
+// 	// Sat Jul 20 2023 16:22:04 GMT+0300 (Москва, стандартное время)
+// myDate.setYear(2020); // здесь меняется только год,
+// 	// автоматически меняется день недели
+// 	// Wed Jul 20 2020 16:22:04 GMT+0300 (Москва, стандартное время)
+
+
+// // здесь происходит всё то же, что и в коде выше, когда мы выводили
+// // дату для текущего дня с названиями дней недели и месяцев на русском
+// let fullDate = myDate.getDate() + " " + months[myDate.getMonth()] +
+// " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
+
+// console.log(fullDate); // 15 Июль 2020, Понедельник
+
+// (https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+
+// А new RegExp используется в том случае, когда мы хотим создать регулярное выражение сразу, из динамически сгенерированной строки. Например, у нас есть массив с размеченным на заголовки и пункты текстом. Мы хотим, чтобы пользователь мог выбрать, какую информацию ему показать о заголовках или пунктах:
+
+// const arrText = [
+//     'Пункт1. Описание пункта',
+//     'Заголовок1. Описание',
+//     'Пункт2. Описание пункта',
+//     'Заголовок2. Описание',
+// ]; // массив с размеченным текстом
+
+// let title = prompt('Вы хотите прочитать заголовки или пункты?'); // ожидаем
+// // ввод пользователя 'Заголовок' или ' Пункт'
+
+// // let regexp = `/${title}/`; // если попыться создать регулярное выражение через /.../
+// // и передать title, то в этом случае получим обычную строку
+// // console.log(regexp);
+// // let regexp = /`${title}`/; // в этом случае получим регулярное выражение, но
+// // оно будет выглядеть как /`${title}`/, т. е. значение title не передастся
+
+// let regexp = new RegExp(`${title}`); // используя такую запись создания регулярного
+// // выражения, мы получим то, что хотим. Например, при вводе 'Пункт' мы получим регулярное
+// // выражение /Пункт/
+
+// arrText.forEach((el) => {
+//     if (regexp.test(el)) { // если есть совпадения с регулярным выражением,
+//         console.log(el);  // то выводим этот элемент
+//     }
+// });
+
+// console.log(arrText());
+
+
+
+// const currentDate = new Date()
+
+// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+// console.log(currentDate.toLocaleDateString('ru-RU', {weekday: 'long'})); 
+
+
+// const currentDate = new Date();
+// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+// console.log(currentDate.toLocaleDateString('ru-RU', options));
+
+// let currentDate = new Date();
+
+// console.log(currentDate.toLocaleTimeString('ru-RU'));
+
+
+// let myDate = new Date();
+// // let day = myDate.getDate()
+// // let time = myDate.getHours();
+// // let minutes = myDate.getMinutes();
+// // console.log(day, time, minutes);
+// myDate.setFullYear(2000);
+// console.log(myDate);
+
+
+//Пример как вывести дату и время в русскоязычном формате
+//вариант 1
+
+// function formatDateTime(date) {
+//   const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//   const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+//   const formattedDate = `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${days[date.getDay()]}`;
+//   const formattedTime = `Время: ${date.getHours()}:${padZero(date.getMinutes())}:${padZero(date.getSeconds())}`;
+
+//   return `${formattedDate}\n${formattedTime}`;
+// }
+
+// function padZero(num) {
+//   return String(num).padStart(2, "0");
+// }
+
+// // Пример использования:
+// const myDate = new Date();
+// const formattedDateTime = formatDateTime(myDate);
+// console.log(formattedDateTime);
+
+// Вариант 2 с использованием 'if statement':
+
+
+// function formatDateTime(date) {
+//   const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//   const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+
+//   const formattedDate = `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${days[date.getDay()]}`;
+
+//   let hour = date.getHours();
+//   let minute = date.getMinutes();
+//   let second = date.getSeconds();
+
+//   if (minute < 10) {
+//     minute = "0" + minute;
+//   }
+//   if (second < 10) {
+//     second = "0" + second;
+//   }
+
+//   const formattedTime = `Время: ${hour}:${minute}:${second}`;
+
+//   return `${formattedDate}, ${formattedTime}`;
+// }
+
+// const myDate = new Date();
+// const formattedDateTime = formatDateTime(myDate);
+// console.log(formattedDateTime);
