@@ -1117,3 +1117,148 @@ greet('Adam')
 // const myDate = new Date();
 // const formattedDateTime = formatDateTime(myDate);
 // console.log(formattedDateTime);
+
+
+// 1. Введение. Что такое callback
+
+// const fibonacci = [1, 1, 2, 3, 5, 8];
+
+// // TODO: Допишите код, чтобы в консоль ниже выводились правильные значения
+// // Используйте метод map, чтобы получить массив fibonacci, в котором все числа умножены на 2
+// const multipleByTwoFib = ...
+// // Используйте метод map, чтобы получить массив fibonacci, в котором к каждому числу добавили 10
+// const plusTenFib = ...
+// // Используйте метод filter, чтобы получить массив, в который входят числа Фибоначчи больше 3
+// const onlyBigFib = ...
+
+// console.log(multipleByTwoFib); // => [2, 2, 4, 6, 10, 16]
+// console.log(plusTenFib); // => [11, 11, 12, 13, 15, 18]
+// console.log(onlyBigFib); // => [5, 8]
+
+// const fibonacci = [1, 1, 2, 3, 5, 8];
+// const multipliedByTwoFib = fibonacci.map(item => item * 2);
+
+// console.log(multipliedByTwoFib);
+
+// const plusTenFib = fibonacci.map(item => item + 10);
+// console.log(plusTenFib); // => [11, 11, 12, 13, 15, 18]
+
+// const onlyBigFib = fibonacci.filter(item => item > 3);
+// console.log(onlyBigFib); // => [5, 8]
+
+// Пример callback функции
+// function functionWithCallback(callback) {
+//   // Call the provided callback function
+//   callback();
+// }
+   
+// functionWithCallback(() => {
+//   console.log("Привет из анонимной стрелочной функции")});
+
+
+// function callbackWithArrayLength(arr, callback) {
+//   // console.log(arr.length);
+//   callback(arr.length);
+// }
+
+// callbackWithArrayLength([1], (length) => {
+//   console.log(length);
+// });
+
+// callbackWithArrayLength([1, 1], (len) => {
+//   console.log(len);
+// });
+// callbackWithArrayLength([1, 1, 1, 1, 1], (l) => {
+//   console.log(l);
+// });
+
+
+// function callbackWithArrayLength(arr, callback) {
+//   callback(arr.length);
+// }
+
+// callbackWithArrayLength([1], (length) => {
+//   console.log(length);
+// });
+
+// callbackWithArrayLength([1, 1], (len) => {
+//   console.log(len);
+// });
+
+// callbackWithArrayLength([1, 1, 1, 1, 1], (l) => {
+//   console.log(l);
+// });
+
+// function log(arrItem) {
+//   console.log("Элемент массива:", arrItem);
+// }
+
+// function each(arrItem, cb) {
+// for (let i = 0; i < arrItem.length; i++) {
+//   cb(arr[i]);
+// }
+// }
+
+// each(["Глеб", "Олег", "Татьяна", "Платон"], log);
+
+// function log(arrItem) {
+//   console.log("Элемент массива:", arrItem);
+// }
+
+// function each(arr, cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     cb(arr[i]);
+//   }
+// }
+
+// each(["Глеб", "Олег", "Татьяна", "Платон"], log);
+
+// function square(number) {
+//   return number * number;
+// }
+
+// function map(arr, ruleFunction) {
+//   const output = [];
+
+	
+// 	console.log('ruleFunction', ruleFunction);  // Добавил в консоль лог для отладки
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(ruleFunction(arr[i]));
+//   }
+
+//   return output;
+// }
+
+// // ОШИБКА: написано square() вместо square
+// console.log(map([1, 4, 9, 16], square())); // => Uncaught TypeError: ruleFunction is not a function
+
+
+
+// function add(number1, number2) {
+//   return number1 + number2;
+// }
+
+// function map(arr, ruleFunction) {
+//   const output = [];
+
+//   // Добавил консоль лог для отладки
+//   console.log("ruleFunction", ruleFunction);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(ruleFunction(arr[i]));
+//   }
+
+//   return output;
+// }console.log(
+//   map([1, 4, 9, 16], (item) => {return add(10, item);
+//   })
+// );
+
+const people = [
+  { name: 'Глеб', },
+  { name: 'Анна', },
+  { name: 'Олег',},
+  { name: 'Оксана', }
+];
+console.log(people.sort((person1, person2) => person1.name - person2.name));
