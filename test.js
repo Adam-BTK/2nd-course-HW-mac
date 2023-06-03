@@ -1255,10 +1255,190 @@ greet('Adam')
 //   })
 // );
 
+// const people = [
+//   { name: 'Глеб', },
+//   { name: 'Анна', },
+//   { name: 'Олег',},
+//   { name: 'Оксана', }
+// ];
+// console.log(people.sort((person1, person2) => person1.name.localeCompare(person2.name)));
+
+// const people = [
+//   { name: 'Глеб' },
+//   { name: 'Анна' },
+//   { name: 'Олег' },
+//   { name: 'Оксана' }
+// ];
+
+// console.log(people.sort((person1, person2) => person1.name.localeCompare(person2.name)));
+
+// const numbers = [10, 5, 8, 2, 4, 1, 9];
+// console.log(numbers.sort((el1, el2) => el1 - el2));
+
+// const people = [
+//   { name: 'John', age: 25 },
+//   { name: 'Alice', age: 30 },
+//   { name: 'Bob', age: 20 },
+//   { name: 'Emily', age: 35 }
+// ];
+
+// console.log(people.sort((person1, person2) => person1.age - person2.age));
+// // console.log(people.sort((person1, person2) => person1.name.localeCompare(person2.name)));
+
+// const words = ['apple', 'banana', 'grape', 'orange', 'melon'];
+// console.log(words.sort((a, b) => a.length - b.length));
+
+// const numbers = [8, 2, 5, 1, 9, 4];
+// Your task is to write a sorting function using the `sort` method
+// that will sort the numbers array in ascending order.
+// Write your solution below this comment.
+
+// console.log(numbers.sort((num1, num2) => num1 - num2));
+
+
+// const people = [
+//   { name: 'John', age: 32 },
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 40 },
+// ];
+// Your task is to write a sorting function using the `sort` method
+// that will sort the people array based on the 'age' property in ascending order.
+// Write your solution below this comment.
+
+// console.log(people.sort((person1, person2) => person1.name.localeCompare(person2.name)));
+// console.log(people.sort((person1, person2) => person2.age - person1.age));
+
+// const words = ['apple', 'banana', 'cherry', 'dragonfruit', 'fg'];
+
+// console.log(words.sort((item1, item2) => item2.length - item1.length));
+
+// const words = ['apple', 'banana', 'cherry', 'dragonfruit', 'fg'];
+// // Your code here
+// console.log(words.sort((item1, item2) => item2.length - item1.length));
+// Output: ['fg', 'apple', 'cherry', 'banana', 'dragonfruit']
+
+// const students = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'John', age: 32 },
+//   { name: 'Bob', age: 40 },
+// ];
+// // Your code here
+// console.log(students.sort((person1, person2) => person1.name.localeCompare(person2.name)));
+// Output: [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 40 },
+//   { name: 'John', age: 32 }
+// ]
+
+// 1. Filtering even numbers:
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+// console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
+// console.log(oddNumbers);
+
+//2. Filtering names starting with a specific letter:
+const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Barkob'];
+const filteredNames = names.filter(name => name.startsWith('B') && name.endsWith('b')); //name.startsWith Sensible to Upper and lower keys
+console.log(filteredNames); // Output: ['Bob']
+
 const people = [
-  { name: 'Глеб', },
-  { name: 'Анна', },
-  { name: 'Олег',},
-  { name: 'Оксана', }
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 20 },
+  { name: 'David', age: 35 },
 ];
-console.log(people.sort((person1, person2) => person1.name - person2.name));
+const adults = people.filter(person => person.age >= 25);
+console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 30 }, { name: 'Charlie', age: 20 }, { name: 'David', age: 35 }]
+
+// Task 1:
+// Given an array of numbers, filter out the even numbers and create a new array with only the odd numbers.
+
+// const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const evenNumbers = arr.filter(arr => arr % 2 === 0);
+// const oddNumbers = arr.filter(arr => arr % 2 !== 0);
+// console.log(oddNumbers);
+// console.log(evenNumbers);
+
+
+// Task 2:
+// Given an array of strings, filter out the strings that have a length less than 5 characters 
+// and create a new array with only the longer strings.
+
+const words = ['apple', 'banana', 'grape', 'orange', 'melon'];
+const filteredWords = words.filter(words => words.length <= 5); // Можно отфильтровать в большую или меньшую сторону
+console.log(filteredWords); // (3) ['apple', 'grape', 'melon']  // через знак равенства не работает
+
+
+// Task 3:
+// Given an array of objects representing books, filter out the books that have a price higher 
+// than $50 and create a new array with only the affordable books.
+
+const books  = [
+  {name: 'Цель', author: 'Кокс Джеф', pages: 100, price: 55},
+  {name: 'Проект Феникс', author: 'Джин Ким', pages: 200, price: 45},
+  {name: 'Deadline', author: 'Том Демарко', pages: 250, price: 39},  
+]
+
+const affordableBooks = books.filter(books => books.price <= 50); 
+console.log(affordableBooks); // Printed out books that cost less than $50
+console.log(books.sort((item1, item2) => item1.price - item2.price)); //Sorted books, depending on the price
+console.log(books.sort((item1, item2) => item2.pages - item1.pages)); //Sorted books, depending on the amount of pages
+console.log(books.sort((item1, item2) => item1.name.length - item2.name.length)); //Sorted books, depending on the length of the name
+console.log(books.sort((item1, item2) => item1.author.localeCompare(item2.author))); // Sorted books, alphabetically based on their author 
+
+// 123  --> "123"
+// 999  --> "999"
+// -100 --> "-100"
+// let arr = [ "123", "999", "-100"];Sorted books, alphabetically based on their author
+
+// // Изменить строчное значение в цифровое
+// function numberToString(num) {
+//   const changedArr = num.toString();
+//   return changedArr
+// }
+// console.log(numberToString([ "123", "999", "-100"]));
+
+// А можно было так
+// function numberToString(num) {
+//   return String(num);
+// }
+// console.log(numberToString([ "123", "999", "-100"]));
+
+// А можно было и вот так или так //const numberToString = num => `${num}`;
+// function numberToString(num) {
+//   return ''+num;
+// }
+// console.log(numberToString([ "123", "999", "-100"]));
+
+
+// Задание – слить следующий массив в одно предложение ['hello', 'world', 'this', 'is', 'great']
+// const smashWords = (words) => words.join(' '); 
+// console.log(smashWords(['hello', 'world', 'this', 'is', 'great']));
+
+// smash = function (words) {
+//   return words.join(" ");
+// };
+
+//  тут ещё один вариант через цикл ФОР
+// function smash (words) {
+//   "use strict";
+//   var smashed = '';
+//   for(var i = 0; i<words.length; i++) {
+//     smashed += words[i];
+//     if(i!=words.length-1) {
+//       smashed += ' ';
+//     }
+//   }
+//   return smashed;
+// };bv  ca
+
+const people1 = [
+  { name: 'Глеб', gender: 'male' },
+  { name: 'Анна', gender: 'female' },
+  { name: 'Олег', gender: 'male' },
+  { name: 'Оксана', gender: 'female' }
+];
+
+const malePeople = people1.filter(person => person.gender === 'female');
+console.log(malePeople);
