@@ -241,7 +241,8 @@
 
 // (i - dayOfreport) % 7 calculates the remainder when the difference is divided by 7.
 
-// The modulus operator % returns the remainder of the division operation. In this case, we divide the difference by 7 to determine how many complete sets of 7 days (weeks) have passed. The remainder gives us the number of days beyond the complete weeks. For example, if (i - dayOfreport) is 14, then (i - dayOfreport) % 7 would be 0 since 14 is evenly divisible by 7 (2 weeks).
+// The modulus operator % returns the remainder of the division operation. In this case, we divide the difference 
+//by 7 to determine how many complete sets of 7 days (weeks) have passed. The remainder gives us the number of days beyond the complete weeks. For example, if (i - dayOfreport) is 14, then (i - dayOfreport) % 7 would be 0 since 14 is evenly divisible by 7 (2 weeks).
 
 // (i - dayOfreport) % 7 === 0 checks if the remainder is equal to 0.
 
@@ -806,10 +807,10 @@
 // Write a function called greet that takes a person's name as a parameter and outputs a greeting message to the console.
 // Call the greet function with your name as an argument.
 
-function greet(usersName) {
-  console.log(`Good morning ${usersName}`);
-}
-greet('Adam')
+// function greet(usersName) {
+//   console.log(`Good morning ${usersName}`);
+// }
+// greet('Adam')
 
 // These exercises cover some fundamental concepts in JavaScript, including variables, arithmetic operations, 
 // conditional statements, looping, and functions. They will help you practice and solidify your understanding 
@@ -1338,18 +1339,18 @@ greet('Adam')
 // console.log(oddNumbers);
 
 //2. Filtering names starting with a specific letter:
-const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Barkob'];
-const filteredNames = names.filter(name => name.startsWith('B') && name.endsWith('b')); //name.startsWith Sensible to Upper and lower keys
-console.log(filteredNames); // Output: ['Bob']
+// const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Barkob'];
+// const filteredNames = names.filter(name => name.startsWith('B') && name.endsWith('b')); //name.startsWith Sensible to Upper and lower keys
+// console.log(filteredNames); // Output: ['Bob']
 
-const people = [
-  { name: 'Alice', age: 25 },
-  { name: 'Bob', age: 30 },
-  { name: 'Charlie', age: 20 },
-  { name: 'David', age: 35 },
-];
-const adults = people.filter(person => person.age >= 25);
-console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 30 }, { name: 'Charlie', age: 20 }, { name: 'David', age: 35 }]
+// const people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 20 },
+//   { name: 'David', age: 35 },
+// ];
+// const adults = people.filter(person => person.age >= 25);
+// console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 30 }, { name: 'Charlie', age: 20 }, { name: 'David', age: 35 }]
 
 // Task 1:
 // Given an array of numbers, filter out the even numbers and create a new array with only the odd numbers.
@@ -1365,27 +1366,27 @@ console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Bob', age:
 // Given an array of strings, filter out the strings that have a length less than 5 characters 
 // and create a new array with only the longer strings.
 
-const words = ['apple', 'banana', 'grape', 'orange', 'melon'];
-const filteredWords = words.filter(words => words.length <= 5); // Можно отфильтровать в большую или меньшую сторону
-console.log(filteredWords); // (3) ['apple', 'grape', 'melon']  // через знак равенства не работает
+// const words = ['apple', 'banana', 'grape', 'orange', 'melon'];
+// const filteredWords = words.filter(words => words.length <= 5); // Можно отфильтровать в большую или меньшую сторону
+// console.log(filteredWords); // (3) ['apple', 'grape', 'melon']  // через знак равенства не работает
 
 
 // Task 3:
 // Given an array of objects representing books, filter out the books that have a price higher 
 // than $50 and create a new array with only the affordable books.
 
-const books  = [
-  {name: 'Цель', author: 'Кокс Джеф', pages: 100, price: 55},
-  {name: 'Проект Феникс', author: 'Джин Ким', pages: 200, price: 45},
-  {name: 'Deadline', author: 'Том Демарко', pages: 250, price: 39},  
-]
+// const books  = [
+//   {name: 'Цель', author: 'Кокс Джеф', pages: 100, price: 55},
+//   {name: 'Проект Феникс', author: 'Джин Ким', pages: 200, price: 45},
+//   {name: 'Deadline', author: 'Том Демарко', pages: 250, price: 39},  
+// ]
 
-const affordableBooks = books.filter(books => books.price <= 50); 
-console.log(affordableBooks); // Printed out books that cost less than $50
-console.log(books.sort((item1, item2) => item1.price - item2.price)); //Sorted books, depending on the price
-console.log(books.sort((item1, item2) => item2.pages - item1.pages)); //Sorted books, depending on the amount of pages
-console.log(books.sort((item1, item2) => item1.name.length - item2.name.length)); //Sorted books, depending on the length of the name
-console.log(books.sort((item1, item2) => item1.author.localeCompare(item2.author))); // Sorted books, alphabetically based on their author 
+// const affordableBooks = books.filter(books => books.price <= 50); 
+// console.log(affordableBooks); // Printed out books that cost less than $50
+// console.log(books.sort((item1, item2) => item1.price - item2.price)); //Sorted books, depending on the price
+// console.log(books.sort((item1, item2) => item2.pages - item1.pages)); //Sorted books, depending on the amount of pages
+// console.log(books.sort((item1, item2) => item1.name.length - item2.name.length)); //Sorted books, depending on the length of the name
+// console.log(books.sort((item1, item2) => item1.author.localeCompare(item2.author))); // Sorted books, alphabetically based on their author 
 
 // 123  --> "123"
 // 999  --> "999"
@@ -1433,12 +1434,565 @@ console.log(books.sort((item1, item2) => item1.author.localeCompare(item2.author
 //   return smashed;
 // };bv  ca
 
-const people1 = [
-  { name: 'Глеб', gender: 'male' },
-  { name: 'Анна', gender: 'female' },
-  { name: 'Олег', gender: 'male' },
-  { name: 'Оксана', gender: 'female' }
-];
+// const people1 = [
+//   { name: 'Глеб', gender: 'male' },
+//   { name: 'Анна', gender: 'female' },
+//   { name: 'Олег', gender: 'male' },
+//   { name: 'Оксана', gender: 'female' }
+// ];
 
-const malePeople = people1.filter(person => person.gender === 'female');
-console.log(malePeople);
+// console.log(Object.entries(people1));
+// const malePeople = people1.filter(person => person.gender === 'male');
+// console.log(malePeople);
+
+// for (let i = 0; i < people1.length; i++) {
+//   console.log(people1[i]);
+  
+// }
+
+// for (let person of people1) {
+//   for (let key in person) {
+//     console.log("Key: " + key + ", Value: " + person[key]);
+//   }
+// }
+
+
+// const people2 = {
+//   name: 'Глеб', gender: 'male'
+// }
+// console.log(Object.values(people2));
+
+// let variable2;
+// if (variable2) {
+//   console.log("Variable 2 exists"); // Этот блок не выполнится, так как variable2 равно null
+// }
+
+// const arr = [1,2,3];
+//  arr.push(4);
+//  console.log(arr);
+
+//  Task 1: Print Even Numbers
+//  Write a program that uses a for loop to print all even numbers between 1 and 20.
+
+// Для вывода чисел до указанного значения
+// for (let i = 0; i <= 20; i++) {
+//   console.log(i);  
+// }
+
+
+// Найти факториал числа через цикл for
+// var number =9;
+// var factorial = 1;
+
+// for (var i = 1; i <= number; i++) {
+//     factorial *= i;
+// }
+
+// console.log("Factorial of", number, "is", factorial);
+
+// for (var i = 1; i <= 10; i++) {
+//   for (var j = 1; j <= 10; j++) {
+//       var result = i * j;
+//       console.log(i + " x " + j + " = " + result);
+//   }
+// }
+
+
+// Exercise 1: Sum of Numbers
+// Write a program that calculates and prints the sum of all numbers from 1 to 10.
+
+
+// Цикл фор считает сумму всех чисел до 10
+// let sum = 0;
+
+// for (let i = 1; i <= 12; i++) {
+//   sum += i;
+// }
+
+// console.log("The sum of numbers from 1 to 10 is:", sum);
+
+// Task 1: Calculate the Average
+// Write a program that takes an array of numbers as input and calculates 
+// the average of those numbers using a for loop.
+
+// function calculateAverage(numbers) {
+//   let sum = 0;
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+
+//   const average = sum / numbers.length;
+//   return average;
+// }
+
+// // Example usage:
+// const numbers = [5, 10, 15, 20, 25];
+// const avg = calculateAverage(numbers);
+// console.log("The average is:", avg);
+
+// Task 2: Create an array of strings representing names and display them in reverse order
+
+// Create an array of names
+// let names1 = ["John", "Mary", "David", "Sarah", "Michael"];
+// names1.push('Adam');
+// // names1.pop();
+// // names1.shift();
+// // names1.unshift('Kevin');
+// // Reverse the order of elements in the array
+// // let reversedNames = names1.reverse();
+// //  console.log(reversedNames);
+// // Display the names in reverse order
+// // for (let i = 0; i < names1.length; i++) {
+// //   console.log(names1[i]);
+// // }
+
+// names1.push('Disney');
+
+// // // names1.reverse();
+// // for (let i = names1.length - 1; i >= 0; i--) {
+// //   console.log(names1[i]);
+  
+// // }
+// // for (let i = 0; i < names1.length; i++) {
+// //   console.log(names1[i]);
+  
+// // }
+
+// names1.reverse();
+// console.log(names1);
+
+// for (let i = 0; i < names1.length; i++) {
+//   console.log(names1[i]);
+  
+// }
+
+// names1.unshift('Dilan');
+
+// // for (let i = names1.length; i >= 0; i--) {
+// //   console.log(names1[i]);
+  
+// // }
+// const filteredArr = names1.filter(names1 => names1.startsWith('D'));
+// console.log(filteredArr);
+// for (let i = 0; i < filteredArr.length; i++) {
+//   console.log(filteredArr[i]);
+  
+// }
+
+
+// for (let i = filteredArr.length; i >= 0; i--) {
+//   console.log(filteredArr[i]);
+  
+// }
+
+// filteredArr.forEach(function (element) {
+//   console.log(element);
+// })
+
+// for (const element of names1) {
+//   console.log(element);
+// }
+
+
+// // names1.shift();
+// // names1.pop();
+// for (let i = names1.length - 1; i >= 0; i--) {
+//   console.log(names1[i]);
+  
+// }
+
+// const str = 'Hello World';
+// const arr = str.split(' ');
+// console.log(arr); // ['Hello', 'World']
+
+// const str = 'Hello world';
+// const arr = Array.from(str);
+// console.log(arr); // (11) ['H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+// const arrNew = arr.join('');
+// console.log(arrNew); // Hello world
+
+// const arr = ['Hello', 'World'];
+// const str = arr.toString();
+// console.log(str); // 'Hello,World'
+
+//Так можно удалить элемент из массива
+// const arr = ['Hello', 'World'];
+// const str = arr.toString();
+
+// const stringWithoutComma = str.replace(/,/g, ' ');
+// console.log(stringWithoutComma); 
+
+
+
+// const arr = [3,5,8,2,9,10,11,15,14,16,22];
+
+// const even = arr.filter(el => el % 2 === 0);
+
+// console.log(even);
+
+// const obj = { name: 'John', age: 30, city: 'New York' };
+
+// for (let key in obj) {
+//   console.log(key, obj[key]);
+// }
+
+// const obj = { name: 'John', age: 30, city: 'New York' };
+
+// const keys = Object.keys(obj);
+
+// for (let key of keys) {
+//   console.log(key, obj[key]);
+// }
+
+// const obj = { name: 'John', age: 30, city: 'New York' };
+
+// const entries = Object.entries(obj);
+
+// for (let [key, value] of entries) {
+//   console.log(key, value);
+// }
+// setTimeout(() => {
+//   console.log("Вызов функции через 3 секунды");
+// }, 3000);
+
+
+// 1 задание
+// Используем метод split, filter и свойство length:
+
+https://www.codewars.com/kata/5865918c6b569962950002a1
+// // let counter = 0;
+// // const intervalId = setInterval(() => {
+// //   counter++;
+// //   console.log("Счетчик:", counter);
+// // }, 7000);
+
+// ("Hello", "o")  ==>  1
+// ("Hello", "l")  ==>  2
+// ("", "z")       ==>  0
+// str_count("Hello", 'o'); // returns 1
+// str_count("Hello", 'l'); // returns 2
+// str_count("", 'z'); // returns 0
+
+// const letter = 'l';
+
+// function findLetters(letter) {
+// const word = 'Hello';
+//   const letters = word.split('');
+// filteredLetters = letters.filter(el => el === letter);
+// return filteredLetters.length;
+// }
+
+// console.log(findLetters('H')); 
+
+// function strCount(str, letter){  
+//   const arr = str.split('');//code here
+//   const returnLetters = arr.filter(el => el === letter);
+//   return returnLetters.length;
+// }
+
+// console.log(strCount('Hello', 'l')); // Рабочий вариант
+
+// 2 задание
+// Использовать map и reduce:
+
+// https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
+
+// function squaredArrSum(arr) {
+//   const squaredArr = arr.map(int => int * int);
+//   let sum = 0;
+//   squaredArr.forEach(num => {
+//     sum += num;
+//   });
+//   return sum;
+// }
+
+// console.log(squaredArrSum([1, 2, 3, 4, 5]));
+
+
+// Аналогичные решения
+// function squareSum(numbers){
+//   return numbers.reduce(function(sum, n){
+//     return (n*n) + sum;
+//   }, 0)
+// }
+
+// function squareSum(numbers){
+//   return numbers.reduce((sum,num) => sum + (num * num), 0);
+// }
+
+
+// 3 задание
+// Math.sqrt и условное ветвление:
+
+// https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
+// function nearestSq(n) {
+//   const lowerSq = Math.floor(Math.sqrt(n));
+//   const upperSq = Math.ceil(Math.sqrt(n));
+
+//   const lowerDiff = n - (lowerSq * lowerSq);
+//   const upperDiff = (upperSq * upperSq) - n;
+
+//   if (lowerDiff <= upperDiff) {
+//     return lowerSq * lowerSq;
+//   } else {
+//     return upperSq * upperSq;
+//   }
+// }
+
+// console.log(nearestSq(110));
+// console.log(nearestSq(119)); //А можно было проще: const nearestSq = n => Math.pow(Math.round(Math.sqrt(n)), 2);
+// или так  
+// function nearestSq(n){
+//     return Math.round(n**0.5)**2
+//   }
+//   console.log(nearestSq(91));
+
+
+// 4 задание
+// Split, reverse, join:
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+//Split, reverse, join:
+
+// function reverseInput(word) {
+//   const result = word.split('').reverse().join(''); 
+//   return result; 
+// }
+// console.log(reverseInput('world'));//А можно было еще проще 
+// function solution(str){
+//   return str.split('').reverse().join('');  
+// }
+
+//const solution = str => str.split('').reverse().join('');
+
+
+// 5 задание
+// Split, length, map:
+
+// What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+
+// Example(Input --> Output)
+
+// "apple ban" --> ["apple 5", "ban 3"]
+// "you will win" -->["you 3", "will 4", "win 3"]
+// Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
+
+// Note: String will have at least one element; words will always be separated by a space.
+
+// function returnLength(str) {
+//   const arr = str.split(' ').map(el => el.length);
+//   return str + arr;
+// }
+// console.log(returnLength('word '));
+
+// function returnLength(str) {
+//   const arr = str.trim().split(' ').map(el => `${el} ${el.length}`);
+//   return arr;
+// }
+
+// console.log(returnLength('will you marry me?')); //Output (4) ['will 4', 'you 3', 'marry 5', 'me? 3']
+
+
+//6 задание
+// Арифметические операторы, условное ветвление:
+
+
+// There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), 
+// calculate the total cost of the mangoes.
+
+// function mango(quantity, price) {
+//   const offerQuantity = Math.floor(quantity / 3); 
+//   const remainQuantity = quantity % 3; 
+//   const totalCost = (offerQuantity * 2 + remainQuantity) * price;
+  
+//   return totalCost;
+// }
+
+// Examples:
+// console.log(mango(2, 3)); // Output: 6
+
+//А можно было проще
+// function mango(quantity, price){
+//   return price * (quantity - Math.floor(quantity / 3));
+// }
+
+
+// 7 задание
+// Арифметические операторы, Math.floor():
+
+// function litres(time) {
+//   const drink = 0.5
+//   return Math.floor(time * drink);
+// }
+
+// console.log(litres(6.7));
+// Можно проще 
+// function litres(time) {
+//   return Math.floor(time * 0.5);
+// }
+
+// 8 задание
+// map(), условный оператор:
+// function invert(array) {
+//   return array.map(number => number * -1);
+// }
+
+// console.log(invert([1, 2, 3, 4, 5])); // Output: [-1, -2, -3, -4, -5]
+// console.log(invert([1, -2, 3, -4, 5])); // Output: [-1, 2, -3, 4, -5]
+// console.log(invert([])); // Output: []
+
+
+// 9 задание
+// Цикл, Math.pow():
+
+// function powersOfTwo(n) {
+//   const result = [];
+  
+//   for (let i = 0; i <= n; i++) {
+//     result.push(Math.pow(2, i));
+//   }
+  
+//   return result;
+// }
+
+// console.log(powersOfTwo(0)); // Output: [1]
+// console.log(powersOfTwo(1)); // Output: [1, 2]
+// console.log(powersOfTwo(2)); // Output: [1, 2, 4]
+// console.log(powersOfTwo(3)); // Output: [1, 2, 4]
+
+
+
+// 10 задание
+// length, условный оператор, reduce:
+// Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+// function grow(x) {
+//   return x.reduce((stored, currentV) => {
+//     return stored * currentV;
+//   });
+// }
+
+// console.log(grow([4, 2, 1, 3])); // Output: 24
+
+//А можно проще const grow=x=> x.reduce((a,b) => a*b);
+
+
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+// function calculateSum(num) {
+//   let total = 0;
+//   for (let i = 1; i <= num; i++) {
+//     total += i;
+//   }
+//   return total;
+// }
+
+// 12 задание
+// replace, (регулярка):
+
+// https://www.codewars.com/kata/57a0885cbb9944e24c00008e
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+// function removeExclamationMarks(s) {
+//   return s.replace(/!/g, '');
+// }
+
+// let sentence = "Hello World!!!!!";
+// let result = removeExclamationMarks(sentence);
+// console.log(result); // Output: "Hello World"
+
+
+
+// 13 задание
+// Math.max, Math.min, spread-оператор:
+
+// https://www.codewars.com/kata/577a98a6ae28071780000989
+// var min = function(list) {
+//   return Math.min(...list);
+// }
+
+// var max = function(list) {
+//   return Math.max(...list);
+// }
+
+// let numbers = [5, 2, 9, 1, 7];
+// console.log(min(numbers)); // Output: 1 (minimum)
+// console.log(max(numbers)); // Output: 9 (maximum)
+
+
+// 14 задание
+// split, reverse, join, toUpperCase/toLowerCase:
+
+// https://www.codewars.com/kata/57a1fd2ce298a731b20006a4
+// DESCRIPTION:
+// Write a function that checks if a given string (case insensitive) is 
+// a palindrome. A palindrome is a word, number, phrase, or other sequence 
+// of symbols that reads the same backwards as forwards, such as madam or racecar, the date and 
+// time 12/21/33 12:21, and the sentence: "A man, a plan, a canal – Panama".
+
+// function isPalindrome(x) {
+//   x = x.toLowerCase();
+//   let y = x.split('').reverse().join('');
+//   y = y.toLowerCase();
+//   return x === y;
+// }
+
+// console.log(isPalindrome('A man, Level, a plan, a canal – Panama')); // Output: true
+
+// function isPalindrome(x) {
+//   return x.toLowerCase().split('').reverse().join('') == x.toLowerCase()
+// }
+// console.log(isPalindrome('A man, Level, a plan, a canal – Panama'));
+
+
+// 15 задание
+// Арифметические операторы, reduce:
+
+// https://www.codewars.com/kata/58cb43f4256836ed95000f97
+
+// function findDifference(a, b) {
+//   a = a.reduce((accumulator, currentValue) => {
+//     return accumulator * currentValue;
+//   }); 
+//   b = b.reduce((accumulator, currentValue) => {
+//     return accumulator * currentValue;
+//   });
+//   if (a >= b) {
+//     return a - b;
+//   } else {
+//     return b - a;
+//   }
+// }
+
+// console.log(findDifference([2, 2, 3], [5, 4, 1]));
+// console.log(findDifference([9, 7, 2], [5, 2, 2]));
+// console.log(findDifference([11, 2, 5], [1, 10, 8]));
+// console.log(findDifference([4, 4, 7], [3, 9, 3]));
+
+// А можно было так 
+// function find_difference(a, b) {
+//   return Math.abs(a.reduce((previous, current) => previous * current) - b.reduce((previous, current) => previous * current));
+// }
+
+const person = {
+  name: 'Анатолий',
+  age: 29,
+//   family:{
+//      mother: 'Елена',
+//      father: 'Антон',
+//      children: ['Варвара', 'Леонид']
+//  } 
+};
+
+console.log(person.age);
